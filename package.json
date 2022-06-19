@@ -1,0 +1,133 @@
+{
+  "name": "react-redux-app-template",
+  "version": "1.0.0",
+  "description": "The template that will help you quickly start developing your project using React.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awibox/react-redux-app-template.git"
+  },
+  "keywords": [
+    "react",
+    "redux-thunk",
+    "css-modules",
+    "webpack",
+    "boilerplate",
+    "react-router",
+    "yarn",
+    "react16",
+    "scss",
+    "prop-types"
+  ],
+  "author": "awibox",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "classnames": "^2.2.6",
+    "font-awesome": "^4.7.0",
+    "immutable": "^4.0.0-rc.12",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-immutable-proptypes": "^2.2.0",
+    "react-promise-loader": "1.1.2",
+    "react-promise-tracker": "^2.1.0",
+    "react-redux": "^7.2.8",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
+    "tigerspack": "^0.1.19"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.12.13",
+    "@babel/runtime": "^7.13.10",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.0",
+    "autoprefixer": "^9.8.6",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "coveralls": "^3.1.0",
+    "css-loader": "^5.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-to-json": "^3.4.2",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-react": "^7.23.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "image-webpack-loader": "^7.0.1",
+    "jest": "^26.6.3",
+    "jest-css-modules-transform": "^4.2.0",
+    "jest-enzyme": "^7.1.2",
+    "jsdom": "^19.0.0",
+    "mini-css-extract-plugin": "^1.3.9",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "path": "^0.12.7",
+    "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-modules-values": "^3.0.0",
+    "redux-mock-store": "^1.5.4",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^4.2.3",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production webpack --mode production",
+    "start": "webpack serve --open",
+    "lint": "eslint --report-unused-disable-directives src",
+    "fix": "eslint --fix --report-unused-disable-directives src",
+    "setup": "cp ./.github/hooks/pre-commit ./.git/hooks/pre-commit && chmod +x ./.git/hooks/pre-commit",
+    "test": "jest --coverage",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}",
+      "!src/*.{js,jsx,mjs}",
+      "!src/actions/**/*.{js,jsx,mjs}",
+      "!src/data/**/*.{js,jsx,mjs}",
+      "!src/selectors/**/*.{js,jsx,mjs}",
+      "!src/containers/**/*.{js,jsx,mjs}",
+      "!src/pages/**/*.{js,jsx,mjs}",
+      "!src/reducers/index.js"
+    ],
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "snapshotResolver": "<rootDir>/spec/jestSnapshotResolver",
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/enzyme-to-json/serializer"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/node_modules/jest-enzyme/lib/index.js",
+      "<rootDir>/spec/jestSetupTests.js",
+      "<rootDir>/spec/jestSetupJsDom.js"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      ".+\\.(css|styl|less|sass|scss)$": "<rootDir>/node_modules/jest-css-modules-transform"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/awibox/react-redux-app-template/issues"
+  },
+  "homepage": "https://github.com/awibox/react-redux-app-template#readme",
+  "main": "webpack.config.js"
+}

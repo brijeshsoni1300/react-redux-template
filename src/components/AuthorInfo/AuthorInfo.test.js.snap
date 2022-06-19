@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthorInfo should render correctly 1`] = `
+<Card
+  className="authorInfo"
+  indent={15}
+  padding={15}
+  theme="light"
+>
+  <div
+    className="logo"
+    style={
+      Object {
+        "backgroundImage": "url(http://localhost:8888/avatar)",
+      }
+    }
+  />
+  <div
+    className="title"
+  >
+    John
+  </div>
+  <div
+    className="titleVersion"
+  >
+    USA
+  </div>
+  <div
+    className="infoText"
+  >
+    Addition information
+  </div>
+  <div
+    className="button"
+  >
+    <Button
+      icon={
+        <i
+          className="fa fa-github"
+        />
+      }
+      indent={0}
+      onClick={[Function]}
+    >
+      Github page
+    </Button>
+  </div>
+</Card>
+`;
